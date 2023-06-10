@@ -203,6 +203,6 @@ async def send(message: types.Message, state: FSMContext):
     await message.answer("Ma'lumotlaringiz muvaffaqiyatli yuborildi!", reply_markup=remove_b)
     await state.reset_state()
     await state.finish()
-    await message.answer(f"Assalomu alaykum {message.from_user.full_name}!\n \"Ariza qoldirish\" tugmasini bosing va arizangizni qoldiring."\
+    await message.answer(f"\"Ariza qoldirish\" tugmasini bosing va arizangizni qoldiring.\n"\
                          "Arizani bekor qilish uchun /start buyrug'ini bosing.",
                          reply_markup=start_button)
