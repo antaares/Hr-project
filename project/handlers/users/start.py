@@ -200,9 +200,7 @@ async def send(message: types.Message, state: FSMContext):
     text += f"📍 Qayerdan: {where}"
 
     await bot.send_photo(chat_id=owner, photo=photo, caption=text)
-    await message.answer("Ma'lumotlaringiz muvaffaqiyatli yuborildi!", reply_markup=remove_b)
+    await message.answer("Ma'lumotlaringiz muvaffaqiyatli yuborildi!", reply_markup=start_button)
     await state.reset_state()
     await state.finish()
-    await message.answer(f"\"Ariza qoldirish\" tugmasini bosing va arizangizni qoldiring.\n"\
-                         "Arizani bekor qilish uchun /start buyrug'ini bosing.",
-                         reply_markup=start_button)
+    
